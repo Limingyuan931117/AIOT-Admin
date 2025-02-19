@@ -9,8 +9,6 @@ import { usePermissionStoreHook } from "@/store/modules/permission";
 import { ref, computed, watch, onMounted, onBeforeUnmount } from "vue";
 import LaySidebarLogo from "../lay-sidebar/components/SidebarLogo.vue";
 import LaySidebarItem from "../lay-sidebar/components/SidebarItem.vue";
-import LaySidebarLeftCollapse from "../lay-sidebar/components/SidebarLeftCollapse.vue";
-import LaySidebarCenterCollapse from "../lay-sidebar/components/SidebarCenterCollapse.vue";
 
 const route = useRoute();
 const isShow = ref(false);
@@ -117,16 +115,6 @@ onBeforeUnmount(() => {
         />
       </el-menu>
     </el-scrollbar>
-    <LaySidebarCenterCollapse
-      v-if="device !== 'mobile' && (isShow || isCollapse)"
-      :is-active="pureApp.sidebar.opened"
-      @toggleClick="toggleSideBar"
-    />
-    <LaySidebarLeftCollapse
-      v-if="device !== 'mobile'"
-      :is-active="pureApp.sidebar.opened"
-      @toggleClick="toggleSideBar"
-    />
   </div>
 </template>
 
