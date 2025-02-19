@@ -92,10 +92,7 @@ onBeforeUnmount(() => {
     @mouseleave.prevent="isShow = false"
   >
     <LaySidebarLogo v-if="showLogo" :collapse="isCollapse" />
-    <el-scrollbar
-      wrap-class="scrollbar-wrapper"
-      :class="[device === 'mobile' ? 'mobile' : 'pc']"
-    >
+    <el-scrollbar wrap-class="scrollbar-wrapper">
       <el-menu
         unique-opened
         mode="vertical"

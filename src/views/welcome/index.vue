@@ -8,7 +8,7 @@ const value = ref(0);
 
 <template>
   <div>
-    <h1>Pure-Admin-Thin（非国际化版本）</h1>
+    <h1>首页</h1>
     <div>
       <el-input v-model="value" />
     </div>

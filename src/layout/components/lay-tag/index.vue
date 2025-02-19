@@ -584,7 +584,7 @@ onBeforeUnmount(() => {
           <span
             class="tag-title dark:!text-text_color_primary dark:hover:!text-primary"
           >
-            {{ item.meta.title }}22
+            {{ item.meta.title }}
           </span>
           <span
             v-if="

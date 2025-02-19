@@ -123,7 +123,11 @@ export function useNav() {
 
   /** 获取`logo` */
   function getLogo() {
-    return new URL("/logo.svg", import.meta.url).href;
+    return new URL("/logo.png", import.meta.url).href;
+  }
+
+  function getLogoText() {
+    return new URL("/logo_text.png", import.meta.url).href;
   }
 
   return {
@@ -152,6 +156,7 @@ export function useNav() {
     username,
     userAvatar,
     avatarsStyle,
-    tooltipEffect
+    tooltipEffect,
+    getLogoText
   };
 }

@@ -6,6 +6,7 @@ import LayNavMix from "../lay-sidebar/NavMix.vue";
 import LaySidebarFullScreen from "../lay-sidebar/components/SidebarFullScreen.vue";
 import LaySidebarBreadCrumb from "../lay-sidebar/components/SidebarBreadCrumb.vue";
 import LaySidebarTopCollapse from "../lay-sidebar/components/SidebarTopCollapse.vue";
+// import LaySidebarBreadApps from "../lay-sidebar/components/SidebarBreadApps.vue";
 
 import LogoutCircleRLine from "@iconify-icons/ri/logout-circle-r-line";
 import Setting from "@iconify-icons/ri/settings-3-line";
@@ -30,7 +31,7 @@ const {
       :is-active="pureApp.sidebar.opened"
       @toggleClick="toggleSideBar"
     />
-
+    <!-- <LaySidebarBreadApps /> -->
     <LaySidebarBreadCrumb
       v-if="layout !== 'mix' && device !== 'mobile'"
       class="breadcrumb-container"

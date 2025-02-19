@@ -6,7 +6,7 @@ defineProps({
   collapse: Boolean
 });
 
-const { title, getLogo } = useNav();
+const { title, getLogo, getLogoText } = useNav();
 </script>
 
 <template>
@@ -19,8 +19,9 @@ const { title, getLogo } = useNav();
         class="sidebar-logo-link"
         :to="getTopMenu()?.path ?? '/'"
       >
-        <img :src="getLogo()" alt="logo" />
-        <span class="sidebar-title">{{ title }}</span>
+        <img class="logo" :src="getLogo()" alt="logo" />
+        <!-- <img :src="getLogoText()" alt="logo" /> -->
+        <!-- <span class="sidebar-title">{{ title }}</span> -->
       </router-link>
       <router-link
         v-else
@@ -29,8 +30,8 @@ const { title, getLogo } = useNav();
         class="sidebar-logo-link"
         :to="getTopMenu()?.path ?? '/'"
       >
-        <img :src="getLogo()" alt="logo" />
-        <span class="sidebar-title">{{ title }}</span>
+        <img class="logo" :src="getLogo()" alt="logo" />
+        <img class="logoText" :src="getLogoText()" alt="logo" />
       </router-link>
     </transition>
   </div>
@@ -53,6 +54,13 @@ const { title, getLogo } = useNav();
     img {
       display: inline-block;
       height: 32px;
+    }
+    .logo {
+      height: 40px;
+    }
+
+    .logoText {
+      margin-left: 10px;
     }
 
     .sidebar-title {
